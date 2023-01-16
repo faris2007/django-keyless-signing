@@ -20,10 +20,8 @@ jobs:
     steps:
     - name: checkout repository
       uses: actions/checkout@v2 
-    - name: Install cosign
-      uses: sigstore/cosign-installer@main
-      with:
-        cosign-release: 'v1.4.1'
+    - name: cosign-installer
+      uses: sigstore/cosign-installer@v2.8.1
     - name: Setup Docker buildx
       uses: docker/setup-buildx-action@v2
     - name: Log into ghcr.io
